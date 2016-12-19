@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +21,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        AdView mAdView = (AdView) findViewById(R.id.main_adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("32AD31E5208FECC334D4FA0D7D1B6CAD")
+                .addTestDevice("DE464F2336490373C94A1C6ECE1FBBAE")
+                .build();
+        mAdView.loadAd(adRequest);
+
     }
 
     @Override

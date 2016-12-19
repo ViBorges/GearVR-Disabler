@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_about">About</string>
     <string name="version">Version 1.0</string>
-    <string name="about_text">Blabalbalabla balbal balabla baabla ablabl ablabalalabal balabla ablab l abablal ablaba</string>
+    <string name="about_text">This app was developed by Vinicius Borges, software engineer student at Brasilia University. Don\'t forget to evaluate this app.</string>
     <string name="donate">Buy me a beer (:</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3212958863845087/1406909650</string>
 </resources>

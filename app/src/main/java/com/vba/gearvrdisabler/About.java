@@ -1,16 +1,15 @@
 package com.vba.gearvrdisabler;
 
-import android.app.PendingIntent;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.TaskStackBuilder;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 public class About extends AppCompatActivity {
 
@@ -19,16 +18,20 @@ public class About extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        final Button donateButton = (Button) findViewById(R.id.about_donate_button);
+        AdView mAdView = (AdView) findViewById(R.id.about_adView);
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice("32AD31E5208FECC334D4FA0D7D1B6CAD")
+                .addTestDevice("DE464F2336490373C94A1C6ECE1FBBAE")
+                .build();
+        mAdView.loadAd(adRequest);
 
+        final Button donateButton = (Button) findViewById(R.id.about_donate_button);
         donateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 donate();
             }
         });
-
-
     }
 
     private void donate() {

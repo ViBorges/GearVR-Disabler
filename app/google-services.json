@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "409934246284",
+    "firebase_url": "https://gearvr-disabler.firebaseio.com",
+    "project_id": "gearvr-disabler",
+    "storage_bucket": "gearvr-disabler.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409934246284:android:23a2496bb39baa21",
+        "android_client_info": {
+          "package_name": "com.vba.gearvrdisabler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409934246284-ffoensigcdle1gqt8s05mieimdvi3vr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0X57zyGUQ57os-TgrwfKOrdYrneW6cHs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

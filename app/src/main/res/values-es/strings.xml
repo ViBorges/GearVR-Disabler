@@ -4,4 +4,6 @@
     <string name="version">Versión 1.0</string>
     <string name="action_settings">Ajustes</string>
     <string name="action_about">Acerca de</string>
+    <string name="donate">Comprame una cerveza (:</string>
+    <string name="about_text">Esta aplicación fue desarrollada por Vinícius Borges, estudiante de ingeniería de software en la Universidad de Brasília. No olvide evaluar esta aplicación.</string>
 </resources>

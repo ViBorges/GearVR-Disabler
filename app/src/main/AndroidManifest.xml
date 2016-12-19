@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vba.gearvrdisabler">
 
+    <!-- User Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,19 +16,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <!--
-        <receiver android:name=".GrantAdminAcess">
-            android:label="@string/app_name"
-            android:description="@string/sample_device_admin_description"
-            android:permission="android.permission.BIND_DEVICE_ADMIN"
-            <meta-data android:name="android.app.device_admin" />
-            <intent-filter>
-                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
-            </intent-filter>
-        </receiver>
-        -->
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
         <activity
             android:name=".Splashscreen"
             android:theme="@style/SplashTheme">
@@ -36,8 +30,7 @@
         <activity
             android:name=".About"
             android:label="@string/action_about"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
