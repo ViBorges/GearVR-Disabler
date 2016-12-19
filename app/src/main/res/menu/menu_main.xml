@@ -4,7 +4,20 @@
     tools:context="com.vba.gearvrdisabler.MainActivity">
     <item
         android:id="@+id/action_about"
-        android:orderInCategory="100"
+        android:orderInCategory="101"
         android:title="@string/action_about"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_remove_ads"
+        android:orderInCategory="102"
+        app:showAsAction="never"
+        android:title="@string/remove_ads"/>
+
+    <item
+        android:id="@+id/action_report_bug"
+        android:title="@string/report_bug"
+        android:orderInCategory="103"
+        app:showAsAction="never"
+        />
 </menu>

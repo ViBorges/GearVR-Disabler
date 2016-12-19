@@ -6,4 +6,6 @@
     <string name="action_about">Acerca de</string>
     <string name="donate">Comprame una cerveza (:</string>
     <string name="about_text">Esta aplicación fue desarrollada por Vinícius Borges, estudiante de ingeniería de software en la Universidad de Brasília. No olvide evaluar esta aplicación.</string>
+    <string name="report_bug">Reportar errores</string>
+    <string name="remove_ads">Quitar anuncios</string>
 </resources>

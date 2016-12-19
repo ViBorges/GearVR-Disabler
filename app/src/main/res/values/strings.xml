@@ -7,4 +7,6 @@
     <string name="donate">Buy me a beer (:</string>
     <string name="banner_main_id">ca-app-pub-3212958863845087/1406909650</string>
     <string name="banner_about_id">ca-app-pub-3212958863845087/5021354052</string>
+    <string name="report_bug">Report bugs</string>
+    <string name="remove_ads">Remove ads</string>
 </resources>
