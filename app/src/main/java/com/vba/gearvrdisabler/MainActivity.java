@@ -12,8 +12,11 @@ import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 public class MainActivity extends AppCompatActivity {
+
+    private InterstitialAd mIntertitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         mAdView.loadAd(adRequest);
 
+        mIntertitialAd = new InterstitialAd(this);
+        mIntertitialAd.setAdUnitId("ca-app-pub-3212958863845087/9172352057");
+        AdRequest adRequest1 = new AdRequest.Builder()
+                .addTestDevice("32AD31E5208FECC334D4FA0D7D1B6CAD")
+                .addTestDevice("DE464F2336490373C94A1C6ECE1FBBAE")
+                .build();
+        mIntertitialAd.loadAd(adRequest1);
     }
 
     @Override
@@ -47,8 +57,14 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_about) {
-            Intent intent = new Intent(this, About.class);
-            startActivity(intent);
+            if (mIntertitialAd.isLoaded()) {
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
+                mIntertitialAd.show();
+            } else {
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
+            }
         }
 
         return super.onOptionsItemSelected(item);
