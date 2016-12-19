@@ -3,7 +3,6 @@
     package="com.vba.gearvrdisabler">
 
     <application
-        android:name=".AdminVerification"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -33,6 +32,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".About"
+            android:label="@string/action_about"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

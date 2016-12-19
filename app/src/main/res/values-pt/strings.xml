@@ -2,4 +2,6 @@
 <resources>
     <string name="app_name">GearVR Disabler</string>
     <string name="action_settings">Configurações</string>
+    <string name="action_about">Sobre</string>
+    <string name="version">Versão 1.0</string>
 </resources>
