@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice("32AD31E5208FECC334D4FA0D7D1B6CAD")
                 .addTestDevice("DE464F2336490373C94A1C6ECE1FBBAE")
+                .addTestDevice("1BB6E2B19973F7E94FB3B250694057D3")
                 .build();
         mAdView.loadAd(adRequest);
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest1 = new AdRequest.Builder()
                 .addTestDevice("32AD31E5208FECC334D4FA0D7D1B6CAD")
                 .addTestDevice("DE464F2336490373C94A1C6ECE1FBBAE")
+                .addTestDevice("1BB6E2B19973F7E94FB3B250694057D3")
                 .build();
         mIntertitialAd.loadAd(adRequest1);
     }
