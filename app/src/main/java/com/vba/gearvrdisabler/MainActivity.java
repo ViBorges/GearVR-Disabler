@@ -2,6 +2,7 @@ package com.vba.gearvrdisabler;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -38,6 +39,35 @@ public class MainActivity extends AppCompatActivity {
                 .addTestDevice("1BB6E2B19973F7E94FB3B250694057D3")
                 .build();
         mIntertitialAd.loadAd(adRequest1);
+
+        checkFirstRun();
+
+
+    }
+
+    private void firstRunDialog(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.first_run_dialog_title);
+        builder.setMessage(R.string.first_run_dialog_content);
+        builder.setCancelable(false);
+        builder.setPositiveButton(R.string.first_run_dialog_continue, null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void checkFirstRun() {
+        boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
+        if (isFirstRun){
+            //action
+            firstRunDialog();
+
+            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
+                    .edit()
+                    .putBoolean("isFirstRun", false)
+                    .apply();
+        }
     }
 
     @Override

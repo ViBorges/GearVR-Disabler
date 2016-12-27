@@ -9,4 +9,7 @@
     <string name="banner_about_id">ca-app-pub-3212958863845087/5021354052</string>
     <string name="report_bug">Report bugs</string>
     <string name="remove_ads">Remove ads</string>
+    <string name="first_run_dialog_title">First run</string>
+    <string name="first_run_dialog_content">This app require internet connection, enable it to continue.\n\nIt also require Admin Acess and Samsung\'s license activation.\nRemind that Samsung\'s license activation is on their server, so sometimes it won\'t work because of internet traffic. So be patient and try again later.\n\nTo uninstall this app go to options and click uninstall.</string>
+    <string name="first_run_dialog_continue">Continue</string>
 </resources>
