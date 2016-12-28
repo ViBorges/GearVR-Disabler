@@ -6,8 +6,8 @@
     <string name="version">Version 1.0</string>
     <string name="about_text">This app was developed by Vinicius Borges, software engineer student at Brasilia University. Don\'t forget to evaluate this app.</string>
     <string name="donate">Buy me a beer (:</string>
-    <string name="banner_main_id">ca-app-pub-3212958863845087/1406909650</string>
-    <string name="banner_about_id">ca-app-pub-3212958863845087/5021354052</string>
+    <string name="banner_main_id" translatable="false">ca-app-pub-3212958863845087/1406909650</string>
+    <string name="banner_about_id" translatable="false">ca-app-pub-3212958863845087/5021354052</string>
     <string name="report_bug">Report bugs</string>
     <string name="remove_ads">Remove ads</string>
     <string name="first_run_dialog_title">First run</string>

@@ -8,4 +8,11 @@
     <string name="about_text">Este aplicativo foi desenvolvido por Vinícius Borges, estudante de engenharia de software pela Universidade de Brasília. Não se esqueça de avaliar este aplicativo.</string>
     <string name="remove_ads">Remover anúncios</string>
     <string name="report_bug">Reportar bugs</string>
+    <string name="uninstall_dialog_titlle">Alerta</string>
+    <string name="uninstall_dialog_content">Tem certeza que quer desinstalar?</string>
+    <string name="first_run_dialog_title">Primeira execução</string>
+    <string name="dialog_continue">Continuar</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="action_uninstall">Desinstalar</string>
+    <string name="first_run_dialog_content">Este aplicativo requer conexão com a Internet, habilite para continuar.\n\nTambém requer acesso de administrador e ativação de licença da Samsung.\nLembre-se que a ativação de licença da Samsung está em seu servidor, por isso às vezes não funcionará por causa do tráfego na Internet. Então, seja paciente e tente novamente mais tarde.\n\nPara desinstalar este aplicativo, vá para as opções e clique em desinstalar.</string>
 </resources>
