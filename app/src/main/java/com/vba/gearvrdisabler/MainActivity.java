@@ -1,5 +1,6 @@
 package com.vba.gearvrdisabler;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -45,13 +46,26 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void firstRunDialog(){
+    private void firstRunDialog() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.first_run_dialog_title);
         builder.setMessage(R.string.first_run_dialog_content);
         builder.setCancelable(false);
-        builder.setPositiveButton(R.string.first_run_dialog_continue, null);
+        builder.setPositiveButton(R.string.dialog_continue, null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+    public void uninstallDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.uninstall_dialog_titlle);
+        builder.setMessage(R.string.uninstall_dialog_content);
+        builder.setCancelable(false);
+        builder.setNegativeButton(R.string.dialog_cancel, null);
+        builder.setPositiveButton(R.string.dialog_continue, null);
         AlertDialog dialog = builder.create();
         dialog.show();
 
@@ -59,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void checkFirstRun() {
         boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
-        if (isFirstRun){
+        if (isFirstRun) {
             //action
             firstRunDialog();
 
@@ -102,6 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.action_report_bug) {
             return true;
+        }
+
+        if (id == R.id.action_uninstall) {
+            uninstallDialog();
         }
 
         return super.onOptionsItemSelected(item);

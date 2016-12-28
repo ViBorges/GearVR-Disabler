@@ -20,4 +20,10 @@
         android:orderInCategory="103"
         app:showAsAction="never"
         />
+
+    <item
+        android:id="@+id/action_uninstall"
+        android:title="@string/action_uninstall"
+        android:orderInCategory="104"
+        app:showAsAction="never"/>
 </menu>
