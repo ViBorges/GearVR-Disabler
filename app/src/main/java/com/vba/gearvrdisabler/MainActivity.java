@@ -1,11 +1,16 @@
 package com.vba.gearvrdisabler;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -55,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(R.string.dialog_continue, null);
         AlertDialog dialog = builder.create();
         dialog.show();
+        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Color.parseColor("#00a8c1"));
 
     }
 
@@ -65,10 +71,24 @@ public class MainActivity extends AppCompatActivity {
         builder.setMessage(R.string.uninstall_dialog_content);
         builder.setCancelable(true);
         builder.setNegativeButton(R.string.dialog_cancel, null);
-        builder.setPositiveButton(R.string.dialog_continue, null);
+        builder.setPositiveButton(R.string.dialog_continue, uninstallDisabler());
         AlertDialog dialog = builder.create();
         dialog.show();
+        dialog.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Color.parseColor("#00a8c1"));
+        dialog.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(Color.parseColor("#00a8c1"));
+    }
 
+
+
+    public DialogInterface.OnClickListener uninstallDisabler(){
+        return new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                startActivity(new Intent("android.intent.action.DELETE", Uri.parse("package:" + getApplicationContext().getPackageName())));
+
+            }
+        };
     }
 
     public void checkFirstRun() {
